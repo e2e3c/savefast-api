@@ -1,4 +1,3 @@
-
 const express = require("express");
 const app = express();
 
@@ -12,4 +11,7 @@ app.post("/api/process", (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log("API running"));
+// مهم جدًا 👇
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => console.log("API running on " + PORT));
